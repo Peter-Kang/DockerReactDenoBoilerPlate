@@ -2,5 +2,5 @@
 ScaffoldProject
 
 # Run without docker
-npm install
-npm start
+`npm install`
+`npm start`
