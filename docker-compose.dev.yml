@@ -1,0 +1,13 @@
+version: '0'
+services:
+  app:
+    build:
+      context: . #move to the root of folder struct
+      dockerfile: react-app/Dockerfile.dev
+    image: react-app
+    enviroment:
+    - NODE_ENV=development
+    ports:
+      - '3000:3000' #for docker to know where to redirect hot module reload queries
+    environment:
+      - CHOKIDAR_USEPOLLING=true
