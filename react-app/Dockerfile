@@ -3,8 +3,8 @@
 FROM node:13.12.0-alpine
 # Set the working directory
 WORKDIR /react-app
-# Copy app dependencies to container
-COPY ./package*.json ./
+# Copy app dependencies and app to container
+COPY react-app/. .
 # Add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 # Install dependencies

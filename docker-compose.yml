@@ -3,10 +3,12 @@ services:
   app:
     build:
       context: . #move to the root of folder struct
-      dockerfile: react-app/Dockerfile.dev
-    image: react-app
-    enviroment:
-    - NODE_ENV=development
+      dockerfile: react-app/Dockerfile
+    image: react-app-image
+    container_name: react-app-container
+    volumes:
+       - ${PWD-.}/react-app:/usr/src/app
+       - /usr/src/app/react-app/node_modules
     ports:
       - '3000:3000' #for docker to know where to redirect hot module reload queries
     environment:
