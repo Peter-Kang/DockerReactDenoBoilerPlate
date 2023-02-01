@@ -1,5 +1,5 @@
 # DockerReactHotReloading
-ScaffoldProject
+Boilder plate
 
 # Run without docker
 `cd react-app`
