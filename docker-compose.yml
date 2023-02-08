@@ -1,10 +1,10 @@
 version: '0'
-name: 'React'
+name: 'React-Deno'
 services:
-  app:
+  react:
     build:
       context: . #move to the root of folder struct
-      dockerfile: react-app/Dockerfile
+      dockerfile: /react-app/Dockerfile
     image: react-app-image
     container_name: react-app-container
     volumes:
@@ -15,3 +15,13 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
+  deno:
+    build:
+      context: ./deno-backend
+      dockerfile: Dockerfile
+    image: deno-image
+    container_name: deno-container
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
