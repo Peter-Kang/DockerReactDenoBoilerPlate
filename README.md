@@ -1,5 +1,5 @@
-# DockerReactHotReloading
-Boilder plate
+# DockerReactDenoBoilerplant
+Boilder plate project
 
 # Run without docker
 `cd react-app`<br>
