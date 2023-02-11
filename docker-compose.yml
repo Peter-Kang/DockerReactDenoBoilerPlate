@@ -3,12 +3,12 @@ name: 'React-Deno'
 services:
   react:
     build:
-      context: . #move to the root of folder struct
-      dockerfile: /react-app/Dockerfile
+      context: ./react-app #move to the root of folder struct
+      dockerfile: Dockerfile
     image: react-app-image
     container_name: react-app-container
     volumes:
-       - ${PWD-.}/react-app:/usr/src/app/react-app
+       - ./react-app:/usr/src/app/react-app
        - /usr/src/app/react-app/node_modules
     ports:
       - '3000:3000' #for docker to know where to redirect hot module reload queries
