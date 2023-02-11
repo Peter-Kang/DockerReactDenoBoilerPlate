@@ -22,6 +22,6 @@ services:
     image: deno-image
     container_name: deno-container
     ports:
-      - "8000:8000"
+      - "8000:8080"
     environment:
       - PORT=8000
